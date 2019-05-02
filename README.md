@@ -12,11 +12,11 @@ It will work with: All Redhat and Centos
 SSH users login management playbook:
 The project used customized inventory, variable file and used the roles and tags methodology
 
-To grant the ssh access to users, first need to add those users name in GRANTEDSSHUSERS group in accesslist and run the playbook like below
+ansible-playbook -i serverslist  sshmgmt.yml --extra-vars "hostgroup=DEV" 
+
+You can use tags to call only grant task or deny task
 
 ansible-playbook -i serverslist  sshmgmt.yml --extra-vars "hostgroup=DEV" --tags grant
-
-To deny the ssh access to users, first need to add those users name in DENIEDSSHUSERS group in accesslist and run the playbook like below
 
 ansible-playbook -i serverslist  sshmgmt.yml --extra-vars "hostgroup=DEV" --tags deny
 

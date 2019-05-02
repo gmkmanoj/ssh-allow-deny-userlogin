@@ -4,3 +4,4 @@ GRANTEDSSHUSERS:
 
 DENIEDSSHUSERS:
   user3: { name: 'user3' }
+
